@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* Ulepszony reset CSS */
+/* Ustawienie box-sizing dla wszystkich elementów */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Resetowanie marginesów i paddingów */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Domyślne ustawienia typografii */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Smooth scroll dla całego dokumentu */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Podstawowe style dla ciała dokumentu */
+body {
+  width: 100vw;
+  height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Resetowanie list */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Linki bez klasy */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media elementy */
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Widoczne elementy media */
+video,
+audio {
+  display: block;
+  max-width: 100%;
+}
+
+/* Elementy form */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Styl dla przycisków i linków */
+button,
+a {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  text-align: inherit;
+  font: inherit;
+  color: inherit;
+}
+
+/* Ustawienia typografii dla nagłówków i paragrafów */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Root elementy dla frameworków */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Preferencje ruchu dla osób z ograniczeniami */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}/*# sourceMappingURL=reset.css.map */
