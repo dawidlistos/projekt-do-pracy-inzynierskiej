@@ -2,7 +2,7 @@
 
 ## Opis Projektu
 
-Witamy w projekcie **Spoczi Bank** - kompleksowym, zintegrowanym systemie bankowym, który obejmuje zarówno system internetowy dla klientów indywidualnych, aplikację mobilną, jak i system CRM dla pracowników banku. Projekt ten został zrealizowany w ramach pracy inżynierskiej na Wyższej Szkole Przedsiębiorczości i Administracji w Lublinie.
+🎉 Witamy w projekcie **Spoczi Bank** - nowoczesnym, zintegrowanym systemie bankowym! Obejmuje on system internetowy dla klientów indywidualnych, aplikację mobilną oraz system CRM dla pracowników banku. Projekt został zrealizowany w ramach pracy inżynierskiej na Wyższej Szkole Przedsiębiorczości i Administracji w Lublinie.
 
 ### Szczegóły Projektu
 
@@ -15,9 +15,9 @@ Witamy w projekcie **Spoczi Bank** - kompleksowym, zintegrowanym systemie bankow
 
 ### Technologie
 
-- **Frontend**: HTML5, CSS3 (SCSS), JavaScript (ECMAScript 2021)
-- **Backend**: PHP (wersja 8.3.7 lub nowsza), MySQL (wersja 8.4.0 lub nowsza)
-- **Dodatki**: Google Fonts, Font Awesome (wersja 6.5.2 lub nowsza), Polyfill.io
+🚀 **Frontend**: HTML5, CSS3 (SCSS), JavaScript (ECMAScript 2021)  
+🔧 **Backend**: PHP (wersja 8.3.7+), MySQL (wersja 8.4.0+)  
+✨ **Dodatki**: Google Fonts, Font Awesome (wersja 6.5.2+), Polyfill.io
 
 ### Systemy
 
@@ -31,45 +31,45 @@ Witamy w projekcie **Spoczi Bank** - kompleksowym, zintegrowanym systemie bankow
 #### Spoczi Online
 
 - **Podstawowe**:
-  - Logowanie oraz wylogowanie
-  - Odzyskanie hasła
-  - Zakładanie konta online
-  - Aktualizacja danych
+  - 🔑 Logowanie oraz wylogowanie
+  - 🔒 Odzyskanie hasła
+  - 🆕 Zakładanie konta online
+  - 🔄 Aktualizacja danych
 - **Produkty bankowe**:
-  - Podgląd produktów
-  - Wnioskowanie o nowe produkty
-  - Historia transakcji i generowanie raportów
+  - 📊 Podgląd produktów
+  - 📝 Wnioskowanie o nowe produkty
+  - 📜 Historia transakcji i generowanie raportów
 - **Finanse**:
-  - Przelewy tradycyjne i ekspresowe
-  - Planowanie przelewów i zleceń stałych
-  - Przewalutowanie środków
-  - Zarządzanie kartami płatniczymi
+  - 💸 Przelewy tradycyjne i ekspresowe
+  - 📅 Planowanie przelewów i zleceń stałych
+  - 💱 Przewalutowanie środków
+  - 💳 Zarządzanie kartami płatniczymi
 - **Ustawienia**:
-  - Personalizacja pulpitu
-  - Zmiana hasła i danych osobowych
-  - Tryb jasny i ciemny
+  - 🎨 Personalizacja pulpitu
+  - 🔐 Zmiana hasła i danych osobowych
+  - 🌗 Tryb jasny i ciemny
 - **Dokumenty**:
-  - Podgląd i podpisywanie dokumentów
+  - 📄 Podgląd i podpisywanie dokumentów
 
 #### Spoczi Mobile
 
 - Wszystkie funkcjonalności Spoczi Online plus:
-  - Logowanie przez TouchID/FaceID
-  - Autoryzacja mobilna
-  - Dostęp do Kodu BLIK i Przelewu na telefon BLIK
-  - Mapa bankomatów
+  - 🖐 Logowanie przez TouchID/FaceID
+  - 📲 Autoryzacja mobilna
+  - 🔢 Dostęp do Kodu BLIK i Przelewu na telefon BLIK
+  - 🗺️ Mapa bankomatów
 
 #### Spoczi CRM
 
 - **Podstawowe**:
-  - Logowanie i wylogowanie
-  - Zmiana hasła
+  - 🔑 Logowanie i wylogowanie
+  - 🔐 Zmiana hasła
 - **Zarządzanie klientami**:
-  - Wyszukiwanie klientów
-  - Zakładanie i zamykanie produktów
-  - Przelewy w imieniu klientów
+  - 🔍 Wyszukiwanie klientów
+  - 📂 Zakładanie i zamykanie produktów
+  - 💸 Przelewy w imieniu klientów
 - **Dokumenty**:
-  - Generowanie dokumentów dla klientów
+  - 📄 Generowanie dokumentów dla klientów
 
 ### Produkty Finansowe
 
@@ -91,30 +91,30 @@ Witamy w projekcie **Spoczi Bank** - kompleksowym, zintegrowanym systemie bankow
 ### Bezpieczeństwo
 
 - **Mechanizmy**:
-  - Blokowanie po nieudanych próbach logowania
-  - Zabezpieczenia przed atakami
-  - Szyfrowanie haseł
-  - Dwustopniowe uwierzytelnianie (2FA)
+  - 🔒 Blokowanie po nieudanych próbach logowania
+  - 🛡️ Zabezpieczenia przed atakami
+  - 🔐 Szyfrowanie haseł
+  - 🔑 Dwustopniowe uwierzytelnianie (2FA)
 - **Monitorowanie**:
-  - Logi operacji, analiza behawioralna
+  - 📊 Logi operacji, analiza behawioralna
 
 ### Interfejs Użytkownika
 
 - **Preferencje**:
-  - Nowoczesny wygląd, responsywność
-  - Tryb ciemny, tryb wysokiego kontrastu, zmiana wielkości czcionki
+  - 🆕 Nowoczesny wygląd, responsywność
+  - 🌗 Tryb ciemny, tryb wysokiego kontrastu, zmiana wielkości czcionki
 
 ### Zarządzanie Projektem
 
 - **Narzędzia**: Trello, Google Meet/MS Teams/Discord, GitHub
 - **Plan działania**:
-  - Planowanie, projektowanie, implementacja, testowanie, wdrożenie
-  - Implementacja aplikacji mobilnej i testowanie
+  - 🗓️ Planowanie, projektowanie, implementacja, testowanie, wdrożenie
+  - 📱 Implementacja aplikacji mobilnej i testowanie
 
 ## Grupa Docelowa
 
-- Osoby w wieku 18-26 lat
-- Osoby w wieku 13-18 lat
+- 🧑‍🎓 Osoby w wieku 18-26 lat
+- 👩‍🎓 Osoby w wieku 13-18 lat
 
 ---
 
