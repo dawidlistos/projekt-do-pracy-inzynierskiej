@@ -1,0 +1,124 @@
+// Zmienne kolorów
+$first-color: #bca8f0;
+$second-color: #d1c4f2;
+
+$text-color: #6d7479;
+$background-color: #f2f2f2;
+
+$white-color: #ffffff;
+$black-color: #000000;
+
+// Mixiny
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition($property, $duration: 0.3s) {
+    transition: $property $duration;
+}
+
+@mixin background {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23bca8f0' fill-opacity='0.68'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+// Globalne style
+body {
+    background-color: $background-color;
+    @include background;
+    color: $text-color;
+    font-family: 'Open Sans', sans-serif;
+    @include flex-center(column);
+    height: 100vh;
+    margin: 0;
+    user-select: none;
+}
+
+::selection {
+    text-decoration: none;
+    background: $second-color;
+    color: $white-color;
+}
+
+// Kontener błędu
+.error-container {
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.error-box {
+    background-color: $white-color;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba($black-color, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+}
+
+h1, h3 {
+    color: $first-color;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: $text-color;
+}
+
+button {
+    background-color: $first-color;
+    color: $white-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    @include transition(all);
+
+    &:hover {
+        background-color: $second-color;
+    }
+}
+
+// Animacja machania
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#wave-emoji {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+    transform-origin: 70% 70%;
+    animation-play-state: running;
+}

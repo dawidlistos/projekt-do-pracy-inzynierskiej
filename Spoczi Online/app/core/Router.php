@@ -19,15 +19,15 @@ class Router {
                     $controller->{$actionName}();
                 } else {
                     http_response_code(404);
-                    echo 'Action not found';
+                    include '../app/views/other/error_404.php';
                 }
             } else {
                 http_response_code(404);
-                echo 'Controller class not found';
+                include '../app/views/other/error_404.php';
             }
         } else {
             http_response_code(404);
-            echo 'Controller file not found: ' . $controllerFile;
+            include '../app/views/other/error_404.php';
         }
     }
 }

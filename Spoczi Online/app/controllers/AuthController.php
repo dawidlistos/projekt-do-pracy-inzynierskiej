@@ -61,6 +61,8 @@ class AuthController {
                 $_SESSION['error'] = 'Podałeś nieprawidłowe dane do logowania.';
                 header('Location: /auth');
             }
+        } else {
+            include '../app/views/other/error_404.php';
         }
     }
 

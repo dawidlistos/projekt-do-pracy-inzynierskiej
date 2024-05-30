@@ -13,14 +13,14 @@ class DashboardController {
     }
 
     public function dashboard() {
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
-        if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {
-            header('Location: /auth');
-            exit();
-        }
-        include '../app/views/dashboard.php';
+        // if (session_status() == PHP_SESSION_NONE) {
+        //     session_start();
+        // }
+        // if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {
+        //     header('Location: /auth');
+        //     exit();
+        // }
+        include '../app/views/dashboard/dashboard.php';
     }
 
     public function profile() {
