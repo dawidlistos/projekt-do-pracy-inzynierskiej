@@ -1,182 +1,179 @@
-// Zmienne kolorów
 $first-color: #bca8f0;
 $second-color: #d1c4f2;
-$text-color: #6d7479;
-$background-color: #f2f2f2;
+$text-color: #494c4e;
+$background-color: #ececec;
 $white-color: #ffffff;
 $black-color: #000000;
 
-// Mixiny
-@mixin transition($property, $duration: 0.3s) {
-    transition: $property $duration;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-// Globalne style
 body {
+    font-family: Arial, sans-serif;
     background-color: $background-color;
     color: $text-color;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    user-select: none;
 }
 
-// Navbar
-.navbar {
-    background-color: $first-color;
-    color: $white-color;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 1001;
+.container {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+    "brand content"
+    "nav content";
+    height: 100vh;
 
-    .navbar-brand {
-        font-size: 1.5em;
-        font-weight: bold;
-        z-index: 1002;
+    @media (max-width: 768px) {
+        grid-template-rows: 100px 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "brand"
+        "content";
     }
 
-    .navbar-toggle {
-        display: none;
-        cursor: pointer;
+    .brand {
+        background-color: $first-color;
+        grid-area: brand;
 
-        .navbar-toggle-icon {
-            width: 25px;
-            height: 2px;
-            background-color: $white-color;
-            display: block;
-            margin: 5px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        color: $white-color;
+        text-shadow: 2px 3px 6px rgba(66, 68, 90, 1);
+
+        border-top-right-radius: 55px;
+
+        .name-slogan {
+            text-align: center;
+        }
+
+        button {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+                background: none;
+                border: none;
+                color: $white-color;
+                font-size: 1.5rem;
+                cursor: pointer;
+                margin-top: 0.5rem;
+            }
         }
     }
 
-    .navbar-menu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    .side-nav {
+        grid-area: nav;
+
+        background-color: $first-color;
+        padding: 1rem 10px 6rem 10px;
+
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom-right-radius: 55px;
 
-        li {
-            margin-left: 20px;
+        @media (max-width: 768px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
 
-            a {
-                color: $white-color;
-                text-decoration: none;
-                @include transition(color);
+            &.open {
+                transform: translateX(0);
+            }
+        }
 
-                &:hover {
-                    color: $second-color;
+        .nav-items {
+            ul {
+                list-style: none;
+
+                li {
+                    margin: 1rem 0 1rem 1rem;
+                    transition: scale 0.3s;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        text-shadow: 4px 4px 8px rgba(66, 68, 90, 1);
+
+                        .circle {
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 30px;
+                            width: 30px;
+                            background-color: $second-color;
+                            border-radius: 50%;
+                            margin: 0 10px;
+
+                            i {
+                                color: $white-color;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        scale: 1.05;
+                    }
+                }
+            }
+        }
+
+        .my-account {
+            align-self: center;
+
+            .box {
+                height: 80px;
+                width: 200px;
+                background-color: $second-color;
+                border-radius: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .avatar {
+                    display: inline-flex;
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 50%;
+                    background-color: rgb(167, 167, 167);
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        color: $white-color;
+                        font-size: 24px;
+                    }
+                }
+
+                .data {
+                    font-size: 15px;
+                    margin: 0 10px;
+
+                    .settings {
+                        font-size: 12px;
+                    }
                 }
             }
         }
     }
-}
 
-// Media Queries for responsiveness
-@media (max-width: 768px) {
-    .navbar-menu {
-        display: flex; // Ustawienia domyślne na flex dla animacji
-        flex-direction: column;
-        width: 100%;
+    .main-dashboard {
+        grid-area: content;
         height: 100vh;
-        background-color: $first-color;
-        position: fixed;
-        top: -100vh; // Start menu off screen
-        left: 0;
-        justify-content: center;
-        align-items: center;
-        transform: translateY(0); // Ensure transform is applied
-        @include transition(transform, 0.5s);
-        @include transition(top, 0.5s); // Transition for sliding down
-    }
+        padding: 3rem 2rem 2rem 2rem;
 
-    .navbar-menu li {
-        margin: 20px 0;
-        text-align: center;
-        margin-left: 0px !important;
-    }
-
-    .navbar-toggle {
-        display: block !important;
-        position: relative;
-        z-index: 1002;
-    }
-
-    .navbar-menu.show {
-        top: 0; // Slide menu into view
-    }
-
-    .navbar.show {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $first-color;
-        padding: 10px 20px;
-    }
-}
-
-// Dashboard
-
-.dashboard {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); // 12 kolumn o równej szerokości
-    grid-template-rows: repeat(12, 1fr);;
-    gap: 20px;
-    padding: 20px;
-
-    .dashboard-item {
-        background-color: $white-color;
-        padding: 20px;
-        box-shadow: 0 2px 5px rgba($black-color, 0.1);
-        border-radius: 8px;
-        text-align: center;
-
-        // Kolumny o różnych szerokościach
-        &.col-1 { grid-column: span 1; }
-        &.col-2 { grid-column: span 2; }
-        &.col-3 { grid-column: span 3; }
-        &.col-4 { grid-column: span 4; }
-        &.col-5 { grid-column: span 5; }
-        &.col-6 { grid-column: span 6; }
-        &.col-7 { grid-column: span 7; }
-        &.col-8 { grid-column: span 8; }
-        &.col-9 { grid-column: span 9; }
-        &.col-10 { grid-column: span 10; }
-        &.col-11 { grid-column: span 11; }
-        &.col-12 { grid-column: span 12; }
-
-        // Wiersze o różnych wysokościach
-        &.row-1 { grid-row: span 1; }
-        &.row-2 { grid-row: span 2; }
-        &.row-3 { grid-row: span 3; }
-        &.row-4 { grid-row: span 4; }
-        &.row-5 { grid-row: span 5; }
-        &.row-6 { grid-row: span 6; }
-        &.row-7 { grid-row: span 7; }
-        &.row-8 { grid-row: span 8; }
-        &.row-9 { grid-row: span 9; }
-        &.row-10 { grid-row: span 10; }
-    }
-}
-
-// Media Queries for responsive dashboard
-@media (max-width: 768px) {
-    .dashboard {
-        grid-template-columns: 1fr; // Jeden element na pełnej szerokości
-    }
-
-    .dashboard-item {
-        grid-column: span 12 !important; // Każdy element zajmuje pełną szerokość
-        grid-row: auto !important; // Resetowanie wysokości wiersza dla mobilnych
-
-        &.order-1 { order: 1; }
-        &.order-2 { order: 2; }
-        &.order-3 { order: 3; }
-        &.order-4 { order: 4; }
-        &.order-5 { order: 5; }
+        @media (max-width: 768px) {
+            padding-top: 2rem;
+        }
     }
 }

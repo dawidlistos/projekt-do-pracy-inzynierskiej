@@ -33,38 +33,45 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-brand">Spoczi Online</div>
-        <div class="navbar-toggle" id="navbar-toggle">
-            <span class="navbar-toggle-icon"></span>
-            <span class="navbar-toggle-icon"></span>
-            <span class="navbar-toggle-icon"></span>
+    <div class="container">
+        <div class="brand">
+            <div class="name-slogan">
+                <h2>Spoczi Bank</h2>
+                <h4>Twój spokój finansowy</h4>
+            </div>
+            <button class="mobile-button" id="mobile-button"><i class="fa-solid fa-bars"></i></button>
         </div>
-        <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="#">Strona główna</a></li>
-            <li><a href="#">Transakcje</a></li>
-            <li><a href="#">Ustawienia</a></li>
-            <li><a href="#">Wyloguj się</a></li>
-        </ul>
-    </nav>
-
-    <!-- Elementy dashboard -->
-    <div class="dashboard">
-        <div class="dashboard-item col-4 row-3">Panel 1</div>
-        <div class="dashboard-item col-4 row-3">Panel 2</div>
-        <div class="dashboard-item col-4 row-9">Panel 3</div>
-        <div class="dashboard-item col-8">Panel 4</div>
-        <div class="dashboard-item col-8">Panel 5</div>
+        <div class="side-nav" id="side-nav">
+            <div class="nav-items">
+                <ul>
+                    <li><a href=""><span class="circle"><i class="fa-solid fa-house"></i></span> Pulpit</a></li>
+                    <li><a href=""><span class="circle"><i class="fa-solid fa-wallet"></i></span> Moje rachunki</a></li>
+                    <li><a href=""><span class="circle"><i class="fa-solid fa-credit-card"></i></span> Karty płatnicze</a></li>
+                </ul>
+            </div>
+            <div class="my-account">
+                <div class="box">
+                    <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                    <p class="data">Dawid Listos<br><span class="settings"><i class="fa-solid fa-gear"></i> Ustawienia</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="main-dashboard">
+            <h1>Nagłównek 1 stopnia</h1>
+            <h2>Nagłównek 2 stopnia</h2>
+            <h3>Nagłównek 3 stopnia</h3>
+            <h4>Nagłównek 4 stopnia</h4>
+            <h5>Nagłównek 5 stopnia</h5>
+            <h6>Nagłównek 6 stopnia</h6>
+        </div>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const navbarToggle = document.getElementById("navbar-toggle");
-            const navbarMenu = document.getElementById("navbar-menu");
+        const mobileButton = document.getElementById('mobile-button');
+        const sideNav = document.getElementById('side-nav');
 
-            navbarToggle.addEventListener("click", function() {
-                navbarMenu.classList.toggle("show");
-            });
+        mobileButton.addEventListener('click', () => {
+            sideNav.classList.toggle('open');
         });
     </script>
 </body>
