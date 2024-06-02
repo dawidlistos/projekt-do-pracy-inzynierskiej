@@ -46,7 +46,7 @@ body {
         color: $white-color;
         text-shadow: 2px 3px 6px rgba(66, 68, 90, 1);
 
-        border-top-right-radius: 55px;
+        // border-top-right-radius: 55px;
 
         .name-slogan {
             text-align: center;
@@ -76,7 +76,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border-bottom-right-radius: 55px;
+        // border-bottom-right-radius: 55px;
 
         @media (max-width: 768px) {
             position: fixed;

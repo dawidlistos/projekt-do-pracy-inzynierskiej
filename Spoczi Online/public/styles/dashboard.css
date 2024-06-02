@@ -33,7 +33,6 @@ body {
   justify-content: center;
   color: #ffffff;
   text-shadow: 2px 3px 6px rgb(66, 68, 90);
-  border-top-right-radius: 55px;
 }
 .container .brand .name-slogan {
   text-align: center;
@@ -59,7 +58,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom-right-radius: 55px;
 }
 @media (max-width: 768px) {
   .container .side-nav {

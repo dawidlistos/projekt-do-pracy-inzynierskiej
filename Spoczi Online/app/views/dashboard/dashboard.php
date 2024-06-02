@@ -45,8 +45,10 @@
             <div class="nav-items">
                 <ul>
                     <li><a href=""><span class="circle"><i class="fa-solid fa-house"></i></span> Pulpit</a></li>
-                    <li><a href=""><span class="circle"><i class="fa-solid fa-wallet"></i></span> Moje rachunki</a></li>
-                    <li><a href=""><span class="circle"><i class="fa-solid fa-credit-card"></i></span> Karty płatnicze</a></li>
+                    <li><a href=""><span class="circle"><i class="fa-solid fa-wallet"></i></span> Rachunki i karty</a></li>
+                    <li><a href=""><span class="circle"><i class="fa-solid fa-list"></i></span> Historia transakcji</a></li>
+                    <li><a href=""><span class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></span> Raporty finansowe</a></li>
+                    <li><a href=""><span class="circle"><i class="fa-solid fa-file"></i></span> Moje dokumenty</a></li>
                 </ul>
             </div>
             <div class="my-account">
